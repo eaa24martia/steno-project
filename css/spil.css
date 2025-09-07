@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url('../images/grainy-background.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Styling af Susi */
+.susi-cyklus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+  }
+  
+  .susi-cyklus video {
+    width: 40%; 
+    max-width: 600px; 
+    height: auto; 
+  }
+  
+  /* Container til planeter i en cirkel */
+.planet-circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling af hver planet-element */
+.planet {
+    position: absolute;
+    width: 85px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 510px;
+}
+
+/* Styling af planet-billeder med puls-animation */
+.planet img {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Individuel placering og rotation af hver planet */
+.planet:nth-child(1) {
+    transform: rotate(-50deg) translateX(500px) scale(5) rotate(40deg); 
+}
+.planet:nth-child(2) {
+    transform: rotate(-15deg) translateX(630px) scale(5) rotate(55deg);
+}
+.planet:nth-child(3) {
+    transform: rotate(30deg) translateX(360px) scale(5) rotate(-45deg);
+}
+.planet:nth-child(4) {
+    transform: rotate(145deg) translateX(340px) scale(5) rotate(-135deg);
+}
+.planet:nth-child(5) {
+    transform: rotate(190deg) translateX(560px) scale(5) rotate(-180deg);
+}
+.planet:nth-child(6) {
+    transform: rotate(230deg) translateX(500px) scale(5) rotate(-225deg);
+}
+
+/* Skjuler elementer */
+.screen {
+    display: none;
+}
+
+/* Viser elementer med class active */
+.active {
+    display: block;
+}
+
+/* Styling til når noget er udført */
+.done {
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+
+/* Container til planet-animation i baggrunden */
+.planet-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+}
+
+/* Styling af billede i planet-container med float-animation */
+.planet-container img {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Styling af beskrivelses-tekst til planeter */
+#planetDescription {
+    margin-top: -50px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* Styling af planetens titel */
+#planetTitle {
+    margin-top: 25px;
+    margin-bottom: -30px;
+    font-weight: 550;
+}
+
+/* Styling af overskrifter i actions */
+.action-overskrift{
+    font-size: 50px;
+    font-weight: 550;
+}
+
+/* Container til valg-knapper */
+.actionButtons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 700px;
+}
+
+/* Styling af valg-knapper */
+.choice-button {
+    display: flex;
+    flex-direction: column-reverse;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+/* Styling af billeder i valg-knapper */
+.choice-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* Hover-effekt på valg-billeder */
+.choice-button:hover .choice-image {
+    transform: scale(1.05);
+}
+
+/* Styling af video i spil-layout */
+.susi-cyklus-spil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: -26rem;
+  }
+  
+  .susi-cyklus-spil video {
+    width: 40%; 
+    max-width: 550px; 
+    height: auto; 
+  }
+
+  /* Layout til anden spilsektion med tekst og video */
+  .susi-cyklus-spil2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    text-align: center;
+  }
+
+    .susi-cyklus-spil2 video {
+        width: 40%; 
+        max-width: 550px; 
+        height: auto; 
+    }
+
+    /* Styling af feedback-besked */
+#feedbackMessage {
+    margin-bottom: 2.5rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-top: 5rem;
+}
+
+/* Cutscene-overlay over hele skærmen */
+#cutsceneScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black; 
+    z-index: 9999; 
+  }
+  
+  #cutsceneScreen video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  /* Styling af restart-knap */
+  #restart-button{
+    background-image: url('../images/grainy-background.webp');
+    background-size: cover;
+    border: none;
+    height: 75px;
+    width: 250px;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #efb99c;
+    border-radius: 15px;
+    color: #4b003b;
+  }
+
+/* Animation til puls-effekt */
+  @keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}

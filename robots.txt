@@ -1,0 +1,4 @@
+https://eksamensprojekt.miaagnes.dk/robots.txt
+
+User-agent: *
+Disallow: /

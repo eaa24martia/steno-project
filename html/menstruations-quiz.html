@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steno museet</title>
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<!-- Start skærmen på quizzen, der ændre sig med js -->
+<body>
+    <section id="quiz-section" class="visible">
+        <h1 id="question-number">Spørgsmål 1/10</h1>
+        <h2 id="question-text">Hvor lang tid varer menstruationscyklussen typisk?</h2>
+        <aside class="kalender-container">
+            <img class="question-image" src="../images/kalender.webp" alt="Billede til spørgsmålet">
+            <img class="question-image" src="../images/kalender.webp" alt="Billede til spørgsmålet">
+        </aside>
+        <section id="answer-options">
+          <button class="answer-button" data-answer="a">a. 4 dage</button>
+          <button class="answer-button" data-answer="b">b. 7 dage</button>
+          <button class="answer-button" data-answer="c">c. 14 dage</button>
+          <button class="answer-button" data-answer="d">d. 28 dage</button>
+        </section>
+    </section>
+    
+      <!-- Feedback på ens svar -->
+      <section id="feedback-section">
+        <p id="feedback-message">Rigtigt!</p>
+        <p id="feedback-info">Menstruationscyklussen varer typisk 28 dage, men det kan variere...</p>
+        <button id="next-button">Fortsæt</button>
+      </section>
+    
+      <!-- Slutskærmen, der viser hvor mange man har fået rigtigt -->
+      <section id="result-section" class="visible">
+        <h1 id="final-score">Du fik 0/10 rigtige</h1>
+        <h2 class="final-score-tekst">Flot gået! Vi håber du er blevet klogere på menstruation og kvindekroppen! Er du stadig nysgerrig? Så klik på billedet</h2>
+        
+        <!-- Infographic med klik -->
+        <aside class="infographic">
+          <img src="../images/infographic.webp" alt="Infographic" id="infographicThumbnail" style="cursor: pointer;">
+        </aside>
+      
+        <!-- Infographic pop-up -->
+        <section id="popupModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="popupImage" src="../images/infographic.webp" alt="Popup billede">
+        </section>
+      
+        <!-- Restart knappen, hvor man kan prøve quizzen igen eller gå tilbage til start -->
+        <aside class="restart-button-container">
+          <button id="restart-button">Prøv igen</button>
+          <button class="image-btn" onclick="location.href='/index.html'">Til forsiden</button>
+        </aside>
+      </section>
+
+      <script src="../js/quiz.js"></script>
+</body>
+</html>

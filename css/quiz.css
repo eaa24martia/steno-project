@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url('../images/grainy-background.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+  
+/* Styling af sektioner, skjules som udgangspunkt og centreres */
+  section {
+    padding-top: 50px;
+    margin-top: -50px;
+    max-width: 1500px;
+    margin: auto;
+    display: none;
+    position: relative;
+    background: none;
+  }
+  
+  .visible {
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+}
+
+/* Spørgsmålsnummer styling */
+  #question-number {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 550;
+    color: #4b003b;
+  }
+  
+  /* Spørgsmålstekst styling */
+  #question-text {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin-top: 30px;
+    font-weight: normal;
+    font-family: sans-serif;
+    color: #4b003b;
+  
+  }
+
+  /* Container til kalender billedet */
+  .kalender-container {
+    display: flex;
+    flex-direction: row;
+    gap: 900px;
+    margin-left: 25px;
+    padding-top: 175px;
+    width: 35%;         
+  }
+
+  .kalender-container img{
+    width: 50%; 
+    height: auto; 
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Svar-layout */
+  #answer-options {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: -450px;
+  }
+  
+  /* Svar-knapper */
+  .answer-button {
+    background-image: url('../images/grainy-background.webp'); 
+    background-size: cover;
+    color: #590051;
+    width: 350px;       
+    height: 90px;       
+    padding: 0px;   
+    border: 2px solid #efb99c;
+    border-radius: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    display: block;
+    margin: 1em auto;
+    transition: all 0.2s ease;
+  }
+  
+  .answer-button:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Feedback-section styling */
+  #feedback-section {
+    flex-direction: column; 
+    align-items: center;   
+    justify-content: center; 
+    text-align: center; 
+    min-height: 125vh; 
+}
+  
+  #feedback-message {
+    text-align: center;
+    font-size: 70px;
+    color: #4b003b;
+    font-weight: 550;
+    margin-top: 200px;
+}
+
+#feedback-info {
+    text-align: center;
+    font-size: 30px;
+    max-width: 1000px;
+    margin: 20px auto; 
+    color: #4b003b;
+    line-height: 1.4;
+}
+
+  
+/* Generel button-styling */
+  button {
+    background-image: url('../images/grainy-background.webp');
+    background-size: cover;
+    border: none;
+    height: 75px;
+    width: 200px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #efb99c;
+    border-radius: 15px;
+    font-family: 'Fredoka', sans-serif;
+    color: #4b003b;
+  }
+
+  /* Slutscore styling */
+  #final-score {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 550;
+    color: #4b003b;
+    margin-bottom: 10px;
+  }
+
+  /* Tekst til slutscore */
+  .final-score-tekst{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-family: 'Fredoka', sans-serif;
+    color: #590051;
+  }
+
+  /* Container til genstartsknapper */
+  .restart-button-container{
+    display: grid;
+    grid-template-columns: repeat(2, auto); 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: center; 
+    
+  }
+/* Genstart-knap styling */
+  #restart-button{
+    background-image: url('../images/grainy-background.webp');
+    background-size: cover;
+    border: none;
+    height: 75px;
+    width: 260px;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #efb99c;
+    border-radius: 15px;
+    color: #4b003b;
+  }
+
+  /* Infografik billede */
+  .infographic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.infographic img {
+  width: 85%; 
+  height: auto; 
+}
+
+.infographic-text{
+  display: flex;
+  text-align: center;
+  font-size: 29px;
+  color: #4b003b;
+  margin: 25px 25px 25px 25px;
+}
+
+/* Pop-up */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 10%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Animation */
+  @keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+  

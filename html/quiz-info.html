@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steno museet</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+    <!-- Velkomst til menstruations quizzen -->
+<body>
+    <h1 class="overskrift">Velkommen til menstruations quizzen</h1>
+    <h2 class="tekst">Er du klar til at teste din viden om menstruation? I quizzen får du spørgsmål om kroppen, cyklussen og meget mere af det vi ikke taler nok om. Du behøver ikke vide alt, det handler om at være nysgerrig og lære noget nyt. Tag den alene eller sammen med dine venner!</h2>
+
+        <!-- Mens-Marie, der fortæller om quizzen -->
+    <audio id="voiceAudio2" autoplay>
+        <source src="../images/mens-marie-quiz.mp3" type="audio/mpeg">
+        Din browser understøtter ikke lydafspilleren.
+    </audio>
+
+     <!-- Mens-Marie animation -->
+    <section class="mens-marie">
+        <video autoplay loop muted>
+            <source src="../images/mens-marie.webm" type="video/webm">
+          </video>
+    </section>
+
+     <!-- Start knap til quizzen -->
+     <button class="image-btn" onclick="location.href='menstruations-quiz.html'">Start</button>
+
+    <script src="../js/mens-marie-tale.js"></script>
+</body>
+</html>

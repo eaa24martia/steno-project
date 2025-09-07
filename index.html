@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steno Museet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Overlay, der starter det hele -->
+    <aside id="startOverlay" class="overlay">
+        Klik her for at starte!
+    </aside>
+
+     <!-- Start siden, hvor man får introduktion til Mens-Marie -->
+    <main id="mainContent" class="hidden">
+        <h1 class="overskrift">Velkommen til den oversete krop</h1>
+        <h2 class="tekst">Hej, mit navn er Mens-Marie og jeg vil gerne fortælle om Den Oversete Krop. Det handler om det, vi sjældent taler om, som menstruation. Mange oplever det, men alligevel er det noget, man ofte skjuler eller synes er pinligt. Her kan du lære, hvad menstruation er, hvordan det føles, og hvorfor det er helt normalt. Test din viden i en sjov quiz, måske ved du mere, end du tror! Du kan også hjælpe Susi-Cyklus gennem hendes cyklus i et spil, hvor det handler om at forstå kroppen og lære noget undervejs.</h2>
+    
+        <audio id="voiceAudio1">
+            <source src="images/mens-marie-start.mp3" type="audio/mpeg">
+            Din browser understøtter ikke lydafspilleren.
+        </audio>
+    
+          <!-- Mens-Marie animation -->
+        <section class="mens-marie">
+            <video autoplay loop muted>
+                <source src="images/mens-marie.webm" type="video/webm">
+              </video>
+        </section>
+    
+           <!-- Fortsæt knap -->
+           <button class="image-btn" onclick="location.href='html/menu.html'">Fortsæt</button>
+    </main>
+    
+    <!-- JavaScript -->
+    <script src="js/mens-marie-tale.js"></script>
+    <script src="js/overlay.js"></script>
+    
+</body>
+</html>

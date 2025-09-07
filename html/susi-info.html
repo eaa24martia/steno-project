@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steno museet</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+  <!-- Velkommen til Susi-spillet -->
+<body>
+    <h1 class="overskrift">Velkommen til monsteret Susi-Cyklus spillet</h1>
+    <h2 class="tekst">I Susi-Cyklus spillet skal du hjælpe monsteret Susi gennem sin menstruationscyklus. Find ud af, hvordan hun har det i de forskellige faser, og giv hende det, hun har brug for i den rigtige situation. Lær om kroppen, humør og energi undervejs i spillet!</h2>
+
+    <!-- Mens-Marie, der fortæller om Susi-spillet-->
+    <audio id="voiceAudio" autoplay>
+        <source src="../images/mens-marie-spil.mp3" type="audio/mpeg">
+        Din browser understøtter ikke lydafspilleren.
+      </audio>
+
+      <!-- Mens-Marie og Susi animationer -->
+    <section class="susi-cyklus">
+        <video id="marie" autoplay loop muted>
+          <source src="../images/mens-marie.webm" type="video/webm">
+        </video>
+        <video autoplay loop muted>
+          <source src="../images/susi-wave.webm" type="video/webm">
+        </video>
+      </section>
+
+       <!-- Start knappen til spillet -->
+       <button class="image-btn" onclick="location.href='susi-spil.html'">Start</button>
+
+    <script src="../js/mens-marie-tale.js"></script>
+
+</body>
+</html>

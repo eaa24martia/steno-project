@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>Susi-Cyklus Spil</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/spil.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <section id="planetScreen" class="screen active">
+      
+        <!-- Susi video i midten -->
+        <section class="susi-cyklus">
+          <video id="susiVideo" autoplay muted loop playsinline>
+            <source src="../images/susi-blinking.webm" type="video/webm">
+          </video>
+        </section>
+      
+        <!-- Planeter rundt om videoen -->
+        <section class="planet-circle">
+          <section class="planet" data-planet="bloodmoon" data-original="../images/blood-moon.webp" data-gray="../images/blood-moon-grey.webp" onclick="choosePlanet('bloodmoon')">
+            <section class="planet-wrapper">
+              <img src="../images/blood-moon.webp" alt="Blodmånen">
+            </section>
+          </section>
+          
+          <section class="planet" data-planet="spireplaneten" data-original="../images/spire-planet.webp" data-gray="../images/spire-planet-grey.webp" onclick="choosePlanet('spireplaneten')">
+            <section class="planet-wrapper">
+              <img src="../images/spire-planet.webp" alt="Spire Planeten">
+            </section>
+          </section>
+          
+          <section class="planet" data-planet="powerboost" data-original="../images/power-boost.webp" data-gray="../images/power-boost-grey.webp" onclick="choosePlanet('powerboost')">
+            <section class="planet-wrapper">
+              <img src="../images/power-boost.webp" alt="Power Boost Planeten">
+            </section>
+          </section>
+          
+          <section class="planet" data-planet="aegloesning" data-original="../images/ovulation-planet.webp" data-gray="../images/ovulation-grey.webp" onclick="choosePlanet('aegloesning')">
+            <section class="planet-wrapper">
+              <img src="../images/ovulation-planet.webp" alt="Ægløsnings Planeten">
+            </section>
+          </section>
+          
+          <section class="planet" data-planet="pms" data-original="../images/pms-island.webp" data-gray="../images/pms-island-grey.webp" onclick="choosePlanet('pms')">
+            <section class="planet-wrapper">
+              <img src="../images/pms-island.webp" alt="PMS Øen">
+            </section>
+          </section>
+          
+          <section class="planet" data-planet="skygge" data-original="../images/shadow-planet.webp" data-gray="../images/shadow-planet-grey.webp" onclick="choosePlanet('skygge')">
+            <section class="planet-wrapper">
+              <img src="../images/shadow-planet.webp" alt="Skygge Planeten">
+            </section>
+          </section>
+        </section>
+      </section>
+
+         <!-- Beskrivende blodmåne - Bliver ændret til andre planeter i js -->
+  <section id="planetInfoScreen" class="screen">
+    <section id="quiz-section" class="visible">
+      <h1 id="planetTitle">Blodmånen</h1>
+      <aside class="planet-container">
+        <img class="question-image" src="../images/blood-moon.webp" alt="Billede til spørgsmålet">
+     </aside>
+      <h2 id="planetDescription">Blodmånen markerer starten på Susis cyklus (dag 1–7). Her har hun menstruation og kan føle sig træt og følsom. Hjælp hende med at vælge det, der gør hende glad og komfortabel i denne fase!</h2>
+      <button onclick="showScreen('actionScreen')" class="image-btn">Start</button>
+  </section>
+  </section>
+
+  <!-- Skærm med, hvad man skal give Susi -->
+  <section id="actionScreen" class="screen">
+    <h2 class="action-overskrift">Hvad skal Susi have?</h2>
+
+    <section class="susi-cyklus-spil">
+      <video id="susiVideo2" autoplay muted loop playsinline>
+        <source src="../images/susi-blinking.webm" type="video/webm">
+      </video>
+    </section>
+
+    <aside id="actionButtons" class="actionButtons"></aside>
+  </section>
+
+  <!-- Feedback for om Susi bliver sur eller glad -->
+  <section id="feedbackScreen" class="screen">
+    <h1 id="feedbackHeader"></h1>
+    <section class="susi-cyklus-spil2">
+      <video id="susiVideo-feedback" autoplay muted loop playsinline>
+        <source id="susiVideoSource" src="../images/susi-wave.webm" type="video/webm">
+      </video>
+      <h2 id="feedbackMessage"></h2>
+    </section>
+    <button onclick="returnToPlanets()" id="continueButton" class="image-btn">Fortsæt</button>
+  </section>
+
+  <!-- Animatic, der afspiller til sidst i Susi-spillet -->
+  <section id="cutsceneScreen" class="screen">
+    <video id="cutsceneVideo" controls>
+      <source src="../images/susi-cyklus.webm" type="video/webm">
+      Din browser understøtter ikke video.
+    </video>
+  </section>
+
+   <!-- JavaScript -->
+  <script src="../js/susi-spil.js"></script>
+</body>
+</html>
